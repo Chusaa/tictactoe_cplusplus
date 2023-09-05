@@ -258,22 +258,7 @@ int main()
 		if (usedNumbers.size() == 9)
 		{
 			cout << "Tie" << endl;
-			cout << "Do you want to play again? (YES, NO) ";
-			string ans = "";
-			cin >> ans;
-			if (ans == "NO" || ans == "No" || ans == "no")
-			{
-				return 0;
-			}
-			else if (ans == "YES" || ans == "Yes" || ans == "yes")
-			{
-				system("CLS");
-			}
-			else
-			{
-				cout << "Incorrect Reply!!!" << endl;
-				return 0;
-			}
+			return 0;
 		}
 
 		//////////////////////////////////////////////////////////////////
