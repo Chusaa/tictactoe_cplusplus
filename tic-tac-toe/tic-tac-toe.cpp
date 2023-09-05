@@ -6,112 +6,51 @@
 using namespace std;
 
 bool isEnd = false;
+const int SIZE = 9;
 
-const int HEIGHT = 3;
-const int LENGHT = 3;
 
-bool isGameEnd_X(char arr[HEIGHT][LENGHT])
+bool isGameEnd(char arr[SIZE])
 {
-	if (arr[0][0] == 'X' && arr[0][1] == 'X' && arr[0][2] == 'X')
+	if (arr[0] == arr[1] && arr[1] == arr[2])
 	{
 		isEnd = true;
 		return isEnd;
 	}
-	else if(arr[1][0] == 'X' && arr[1][1] == 'X' && arr[1][2] == 'X')
+	else if(arr[3] == arr[4] && arr[4] == arr[5])
 	{
 		isEnd = true;
 		return isEnd;
 	}
-	else if(arr[2][0] == 'X' && arr[2][1] == 'X' && arr[2][2] == 'X')
+	else if(arr[6] == arr[7] && arr[8])
 	{
 		isEnd = true;
 		return isEnd;
 	}
-	else if (arr[0][0] == 'X' && arr[1][0] == 'X' && arr[2][0] == 'X')
+	else if (arr[0] == arr[3] && arr[3] == arr[6])
 	{
 		isEnd = true;
 		return isEnd;
 	}
-	else if (arr[0][1] == 'X' && arr[1][1] == 'X' && arr[2][1] == 'X')
+	else if (arr[1] == arr[4] && arr[4] == arr[7])
 	{
 		isEnd = true;
 		return isEnd;
 	}
-	else if (arr[0][2] == 'X' && arr[1][2] == 'X' && arr[2][2] == 'X')
+	else if (arr[2] == arr[5] && arr[5] == arr[7])
 	{
 		isEnd = true;
 		return isEnd;
 	}
-	else if (arr[0][0] == 'X' && arr[1][1] == 'X' && arr[2][2] == 'X')
+	else if (arr[0] == arr[4] && arr[4] == arr[8])
 	{
 		isEnd = true;
 		return isEnd;
 	}
-	else if (arr[2][0] == 'X' && arr[1][1] == 'X' && arr[0][2] == 'X')
+	else if (arr[2] == arr[4] && arr[4] == arr[6])
 	{
 		isEnd = true;
 		return isEnd;
 	}
-}
-
-bool isGameEnd_O(char arr[HEIGHT][LENGHT])
-{
-	if (arr[0][0] == 'O' && arr[0][1] == 'O' && arr[0][2] == 'O')
-	{
-		isEnd = true;
-		return isEnd;
-	}
-	else if (arr[1][0] == 'O' && arr[1][1] == 'O' && arr[1][2] == 'O')
-	{
-		isEnd = true;
-		return isEnd;
-	}
-	else if (arr[2][0] == 'O' && arr[2][1] == 'O' && arr[2][2] == 'O')
-	{
-		isEnd = true;
-		return isEnd;
-	}
-	else if (arr[0][0] == 'O' && arr[1][0] == 'O' && arr[2][0] == 'O')
-	{
-		isEnd = true;
-		return isEnd;
-	}
-	else if (arr[0][1] == 'O' && arr[1][1] == 'O' && arr[2][1] == 'O')
-	{
-		isEnd = true;
-		return isEnd;
-	}
-	else if (arr[0][2] == 'O' && arr[1][2] == 'O' && arr[2][2] == 'O')
-	{
-		isEnd = true;
-		return isEnd;
-	}
-	else if (arr[0][0] == 'O' && arr[1][1] == 'O' && arr[2][2] == 'O')
-	{
-		isEnd = true;
-		return isEnd;
-	}
-	else if (arr[2][0] == 'O' && arr[1][1] == 'O' && arr[0][2] == 'O')
-	{
-		isEnd = true;
-		return isEnd;
-	}
-}
-
-void PrintArea(char arr[HEIGHT][LENGHT])
-{
-	cout << "      _______________________________________\n";
-	for (int i = 0; i < HEIGHT; i++)
-	{
-		cout << "\n\n\n|";
-
-		for (int j = 0; j < LENGHT; j++)
-		{
-			cout << "\t" << arr[i][j] << "\t";
-		}
-		cout << "|\n\n\n";
-	}
-	cout << "      _______________________________________\n\n";
 }
 
 void isTrue(vector<int> &res, int &Move)
@@ -139,15 +78,36 @@ void isTrue(vector<int> &res, int &Move)
 	}
 }
 
+void PrintArea(char arr[SIZE])
+{
+	cout << "\n\n\t_____________________________________\n";
+	cout << "\t|           |           |           |\n";
+	cout << "\t|           |           |           |\n";
+	cout << "\t|     " << arr[0] << "     |     " << arr[1] << "     |     " << arr[2] << "     |\n";
+	cout << "\t|           |           |           |\n";
+	cout << "\t|___________|___________|___________|\n";
+	cout << "\t|           |           |           |\n";
+	cout << "\t|           |           |           |\n";
+	cout << "\t|     " << arr[3] << "     |     " << arr[4] << "     |     " << arr[5] << "     |\n";
+	cout << "\t|           |           |           |\n";
+	cout << "\t|___________|___________|___________|\n";
+	cout << "\t|           |           |           |\n";
+	cout << "\t|           |           |           |\n";
+	cout << "\t|     " << arr[6] << "     |     " << arr[7] << "     |     " << arr[8] << "     |\n";
+	cout << "\t|           |           |           |\n";
+	cout << "\t|___________|___________|___________|\n\n\n";
+}
+
+
+
 int main()
 {
-
+	
 	vector<int> usedNumbers;
 
 	system("color A");
-	char arr[LENGHT][LENGHT]{ {'1','2','3'}, {'4','5','6'}, {'7','8','9'}};
 
-	
+	char arr[SIZE]{ '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 
 	char symbol_X = 'X';
 	char symbol_O = 'O';
@@ -172,28 +132,6 @@ int main()
 		cin >> firstMove;
 
 		isTrue(usedNumbers, firstMove);
-
-		/*if (firstMove > 9 || firstMove < 1)
-		{
-			cout << "Incorrect cell!" << endl;
-			while (firstMove > 9 || firstMove < 1)
-			{
-				cout << "Enter another number: "; cin >> firstMove;
-			}
-		}
-		else if (find(usedNumbers.begin(), usedNumbers.end(), firstMove) != usedNumbers.end())
-		{
-			cout << "This cell is already in use by you or another player.\n" << "Select another cell: ";
-			cin >> firstMove;
-			while (true)
-			{
-				cout << "Select another cell: "; cin >> firstMove;
-				if (find(usedNumbers.begin(), usedNumbers.end(), firstMove) == usedNumbers.end() && firstMove < 10 && firstMove > 0)
-				{
-					break;
-				}
-			}
-		}*/
 		
 		usedNumbers.push_back(firstMove);
 		
@@ -202,9 +140,9 @@ int main()
 		if (firstMove == 1)
 		{
 			system("CLS");
-			arr[0][0] = 'X';
+			arr[0] = 'X';
 			PrintArea(arr);
-			isGameEnd_X(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -215,9 +153,9 @@ int main()
 		else if (firstMove == 2)
 		{
 			system("CLS");
-			arr[0][1] = 'X';
+			arr[1] = 'X';
 			PrintArea(arr);
-			isGameEnd_X(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -228,9 +166,9 @@ int main()
 		else if (firstMove == 3)
 		{
 			system("CLS");
-			arr[0][2] = 'X';
+			arr[2] = 'X';
 			PrintArea(arr);
-			isGameEnd_X(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -241,9 +179,9 @@ int main()
 		else if (firstMove == 4)
 		{
 			system("CLS");
-			arr[1][0] = 'X';
+			arr[3] = 'X';
 			PrintArea(arr);
-			isGameEnd_X(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -254,9 +192,9 @@ int main()
 		else if (firstMove == 5)
 		{
 			system("CLS");
-			arr[1][1] = 'X';
+			arr[4] = 'X';
 			PrintArea(arr);
-			isGameEnd_X(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -267,9 +205,9 @@ int main()
 		else if (firstMove == 6)
 		{
 			system("CLS");
-			arr[1][2] = 'X';
+			arr[5] = 'X';
 			PrintArea(arr);
-			isGameEnd_X(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -280,9 +218,9 @@ int main()
 		else if (firstMove == 7)
 		{
 			system("CLS");
-			arr[2][0] = 'X';
+			arr[6] = 'X';
 			PrintArea(arr);
-			isGameEnd_X(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -293,9 +231,9 @@ int main()
 		else if (firstMove == 8)
 		{
 			system("CLS");
-			arr[2][1] = 'X';
+			arr[7] = 'X';
 			PrintArea(arr);
-			isGameEnd_X(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -306,9 +244,9 @@ int main()
 		else if (firstMove == 9)
 		{
 			system("CLS");
-			arr[2][2] = 'X';
+			arr[8] = 'X';
 			PrintArea(arr);
-			isGameEnd_X(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -336,9 +274,9 @@ int main()
 		if (secondMove == 1)
 		{
 			system("CLS");
-			arr[0][0] = 'O';
+			arr[0] = 'O';
 			PrintArea(arr);
-			isGameEnd_O(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -349,9 +287,9 @@ int main()
 		else if (secondMove == 2)
 		{
 			system("CLS");
-			arr[0][1] = 'O';
+			arr[1] = 'O';
 			PrintArea(arr);
-			isGameEnd_O(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -362,9 +300,9 @@ int main()
 		else if (secondMove == 3)
 		{
 			system("CLS");
-			arr[0][2] = 'O';
+			arr[2] = 'O';
 			PrintArea(arr);
-			isGameEnd_O(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -375,9 +313,9 @@ int main()
 		else if (secondMove == 4)
 		{
 			system("CLS");
-			arr[1][0] = 'O';
+			arr[3] = 'O';
 			PrintArea(arr);
-			isGameEnd_O(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -388,9 +326,9 @@ int main()
 		else if (secondMove == 5)
 		{
 			system("CLS");
-			arr[1][1] = 'O';
+			arr[4] = 'O';
 			PrintArea(arr);
-			isGameEnd_O(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -401,9 +339,9 @@ int main()
 		else if (secondMove == 6)
 		{
 			system("CLS");
-			arr[1][2] = 'O';
+			arr[5] = 'O';
 			PrintArea(arr);
-			isGameEnd_O(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -414,9 +352,9 @@ int main()
 		else if (secondMove == 7)
 		{
 			system("CLS");
-			arr[2][0] = 'O';
+			arr[6] = 'O';
 			PrintArea(arr);
-			isGameEnd_O(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -427,9 +365,9 @@ int main()
 		else if (secondMove == 8)
 		{
 			system("CLS");
-			arr[2][1] = 'O';
+			arr[7] = 'O';
 			PrintArea(arr);
-			isGameEnd_O(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
@@ -440,9 +378,9 @@ int main()
 		else if (secondMove == 9)
 		{
 			system("CLS");
-			arr[2][2] = 'O';
+			arr[8] = 'O';
 			PrintArea(arr);
-			isGameEnd_O(arr);
+			isGameEnd(arr);
 			if (isEnd)
 			{
 				cout << "Game Over\n" << endl;
