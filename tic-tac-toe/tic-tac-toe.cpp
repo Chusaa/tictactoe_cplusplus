@@ -21,32 +21,32 @@ bool isGameEnd(char arr[SIZE])
 		isEnd = true;
 		return isEnd;
 	}
-	else if(arr[6] == arr[7] && arr[8])
+	else if(arr[6] == arr[7] && arr[7] == arr[8])
 	{
 		isEnd = true;
 		return isEnd;
 	}
-	else if (arr[0] == arr[3] && arr[3] == arr[6])
+	else if(arr[0] == arr[3] && arr[3] == arr[6])
 	{
 		isEnd = true;
 		return isEnd;
 	}
-	else if (arr[1] == arr[4] && arr[4] == arr[7])
+	else if(arr[1] == arr[4] && arr[4] == arr[7])
 	{
 		isEnd = true;
 		return isEnd;
 	}
-	else if (arr[2] == arr[5] && arr[5] == arr[7])
+	else if(arr[2] == arr[5] && arr[5] == arr[8])
 	{
 		isEnd = true;
 		return isEnd;
 	}
-	else if (arr[0] == arr[4] && arr[4] == arr[8])
+	else if(arr[0] == arr[4] && arr[4] == arr[8])
 	{
 		isEnd = true;
 		return isEnd;
 	}
-	else if (arr[2] == arr[4] && arr[4] == arr[6])
+	else if(arr[2] == arr[4] && arr[4] == arr[6])
 	{
 		isEnd = true;
 		return isEnd;
@@ -102,6 +102,7 @@ void PrintArea(char arr[SIZE])
 
 int main()
 {
+	isEnd = false;
 	
 	vector<int> usedNumbers;
 
@@ -257,8 +258,22 @@ int main()
 		if (usedNumbers.size() == 9)
 		{
 			cout << "Tie" << endl;
-			cout << "Do you want to play again? (YES, NO)";
-			return 0;
+			cout << "Do you want to play again? (YES, NO) ";
+			string ans = "";
+			cin >> ans;
+			if (ans == "NO" || ans == "No" || ans == "no")
+			{
+				return 0;
+			}
+			else if (ans == "YES" || ans == "Yes" || ans == "yes")
+			{
+				system("CLS");
+			}
+			else
+			{
+				cout << "Incorrect Reply!!!" << endl;
+				return 0;
+			}
 		}
 
 		//////////////////////////////////////////////////////////////////
