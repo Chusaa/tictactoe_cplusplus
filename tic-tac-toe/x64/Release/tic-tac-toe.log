@@ -1,7 +1,7 @@
 ﻿  tic-tac-toe.cpp
   Создание кода
-  Previous IPDB and IOBJ mismatch, fall back to full compilation.
-C:\Users\user\source\repos\tic-tac-toe\tic-tac-toe\tic-tac-toe.cpp(54): warning C4715: isGameEnd: значение возвращается не при всех путях выполнения
-  All 177 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  0 of 175 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   tic-tac-toe.vcxproj -> C:\Users\user\source\repos\tic-tac-toe\x64\Release\tic-tac-toe.exe

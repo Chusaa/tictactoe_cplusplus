@@ -1,4 +1,3 @@
 ﻿  tic-tac-toe.cpp
-C:\Users\user\source\repos\tic-tac-toe\tic-tac-toe\tic-tac-toe.cpp(55): warning C4715: isGameEnd_X: значение возвращается не при всех путях выполнения
-C:\Users\user\source\repos\tic-tac-toe\tic-tac-toe\tic-tac-toe.cpp(99): warning C4715: isGameEnd_O: значение возвращается не при всех путях выполнения
+C:\Users\user\source\repos\tic-tac-toe\tic-tac-toe\tic-tac-toe.cpp(54): warning C4715: isGameEnd: значение возвращается не при всех путях выполнения
   tic-tac-toe.vcxproj -> C:\Users\user\source\repos\tic-tac-toe\x64\Debug\tic-tac-toe.exe

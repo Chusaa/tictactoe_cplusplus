@@ -148,6 +148,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << firstName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
@@ -161,6 +162,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << firstName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
@@ -174,6 +176,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << firstName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
@@ -187,6 +190,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << firstName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
@@ -200,6 +204,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << firstName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
@@ -213,6 +218,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << firstName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
@@ -226,6 +232,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << firstName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
@@ -239,6 +246,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << firstName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
@@ -252,12 +260,14 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << firstName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
 		if (usedNumbers.size() == 9)
 		{
-			cout << "Tie" << endl;
+			cout << "Tie\n" << endl;
+			system("PAUSE");
 			return 0;
 		}
 
@@ -281,6 +291,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << secondName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
@@ -294,6 +305,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << secondName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
@@ -307,6 +319,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << secondName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
@@ -320,6 +333,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << secondName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
@@ -333,6 +347,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << secondName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
@@ -346,6 +361,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << secondName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
@@ -359,6 +375,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << secondName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
@@ -372,6 +389,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << secondName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 		}
@@ -385,6 +403,7 @@ int main()
 			{
 				cout << "Game Over\n" << endl;
 				cout << secondName << " is Winner!" << endl;
+				system("PAUSE");
 				return 0;
 			}
 			}
